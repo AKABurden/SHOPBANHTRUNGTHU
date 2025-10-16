@@ -1,0 +1,38 @@
+/* header.module.css */
+.mainHeader { /* Match styles.mainHeader */
+  background: #77DD77;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.headerFlex { /* Match styles.headerFlex */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 80px;
+}
+
+.logo img { /* Match styles.logo */
+  height: 60px;
+}
+
+.mainNav { /* Match styles.mainNav */
+  display: flex;
+  gap: 32px;
+}
+
+.mainNav a, .mainNav .cartLink { /* Match styles.cartLink */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.mainNav a:hover, .mainNav .cartLink:hover {
+  border-bottom: 2px solid #fff;
+}
