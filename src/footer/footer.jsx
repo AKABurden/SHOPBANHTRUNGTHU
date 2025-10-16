@@ -1,6 +1,6 @@
-import React from "react";
-import "./footer.css";
-import Logo from "../image/logo.png";
+import React from 'react';
+import './footer.css';
+
 export default function Footer() {
   return (
     <footer>
@@ -8,18 +8,19 @@ export default function Footer() {
         {/* Thông tin công ty */}
         <div className="footer-info">
           <img
-            src= {Logo}
+            src="/image/logo.png"
             alt="Tiệm bánh Pico"
           />
           <h3>Tiệm bánh Pico</h3>
           <p>
-            <b>Địa chỉ:</b> Bình chánh
+            <b>Địa chỉ:</b> Bình Chánh
           </p>
           <p>
             <b>Liên hệ:</b> +84 762425342
           </p>
           <p>
-            <b>Email:</b> <a href="mailto:trantuyetmy1693@gmail.com">trantuyetmy1693@gmail.com</a>
+            <b>Email:</b>{' '}
+            <a href="mailto:trantuyetmy1693@gmail.com">trantuyetmy1693@gmail.com</a>
           </p>
         </div>
         {/* Liên kết */}

@@ -10,7 +10,7 @@ function Banner() {
       </div>
       <img
         className="banner-img"
-        src="src/image/banner.png"
+        src={`${process.env.PUBLIC_URL}/banner.png`}
         Style="width: 100%; height: 400px; object-fit: cover;"
         alt="Banner"
       />

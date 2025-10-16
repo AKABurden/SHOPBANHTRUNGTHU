@@ -1,32 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LogoHeader from "../image/logo.png";
-import styles from "./header.module.css";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import styles from './header.module.css';
 
-// Header
 function Header({ cartCount }) {
   return (
     <header className={styles.mainHeader}>
       <div className={styles.headerFlex}>
         <div className={styles.logo}>
           <img
-             src={LogoHeader}
-             Style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;"
-             alt="Logo"
+            src="/image/logo.png"
+            style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '50%' }}
+            alt="Company Logo"
           />
-
         </div>
         <nav className={styles.mainNav}>
-          <Link to="/">TRANG CHỦ</Link>
-          <Link to="/sweet">MENU BÁNH</Link>
-
-          <Link to="/cart" className={styles.cartLink}>
+          <NavLink to="/" exact activeClassName={styles.active}>
+            TRANG CHỦ
+          </NavLink>
+          <NavLink to="/sweet" activeClassName={styles.active}>
+            MENU BÁNH
+          </NavLink>
+          <NavLink to="/cart" className={styles.cartLink} activeClassName={styles.active}>
             GIỎ HÀNG ({cartCount})
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </header>
   );
 }
+
+Header.propTypes = {
+  cartCount: PropTypes.number.isRequired,
+};
+
+Header.defaultProps = {
+  cartCount: 0,
+};
 
 export default Header;
